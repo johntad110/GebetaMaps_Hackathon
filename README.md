@@ -35,7 +35,7 @@ Landscoper is a **property assessment platform** powered by a _powerful suite of
 
 ### Quick Links
 
-- [Demo Website](#GebetaMaps_Hackathon.vercel.app)
+- [Demo Website](https://gebeta-maps-hackathon.vercel.app/)
 - [API Wrapper on NPM](https://www.npmjs.com/package/gebetamap)
 
 ---
@@ -275,6 +275,6 @@ This project is licensed under the MIT liscense. See [LICENSE](/LICENSE) for mor
 
 ## 🔗Links
 
-- [Demo Website](#)
+- [Demo Website](https://gebeta-maps-hackathon.vercel.app/)
 - [API Wrapper on NPM](https://www.npmjs.com/package/gebetamap)
 - [GitHub Repository](https://github.com/johntad110/gebeta-maps)
