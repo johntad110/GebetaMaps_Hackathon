@@ -27,7 +27,7 @@ Also this README turned out longer than I wish it to be... so here's a [Contents
 
 ---
 
-## 💡[Introduction](#contents) {#inspiration}
+## 💡[Introduction](#contents)
 
 ### About Landscoper
 
