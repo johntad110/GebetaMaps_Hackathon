@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: landscoper_db
+    environment:
+      MYSQL_ROOT_PASSWORD: /run/secrets/db_root_password
+      MYSQL_DATABASE: landscoper
+      MYSQL_USER: landscoper_user
+      MYSQL_PASSWORD: /run/secrets/db_password
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart:  unless-stopped
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    restart:  unless-stopped
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: /run/secrets/db_root_password
+
+  scraper:
+    build: ./scripts
+    container_name: landscoper_scraper
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: landscoper_user
+      DB_PASSWORD: /run/secrets/db_password # CHANGE_ME 😡!!!
+      DB_NAME: landscoper
+      DATA_FOLDER: ./data
+      DETAILS_FOLDER: ./data/details
+      SCRAPED_FOLDER: ./data/scraped
+      PAGES_TO_SCRAPE: 1
+    command: ["./wait-for-it.sh", "landscoper_db:3306", "--", "python", "async_scraper.py"]
+
+  web:
+    build: ./landscoper
+    container_name: landscoper_web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./landscoper:/app
+      - /app/node_modules
+    depends_on:
+      - scraper
+    environment:
+      DB_HOST: db
+      DB_USER: landscoper_user
+      DB_PASSWORD: /run/secrets/db_password # CHANGE_ME 😡!!!
+      DB_NAME: landscoper
+
+secrets:
+  db_root_password:
+    file: db_root_password.txt
+  db_password:
+    file: db_password.txt
+  base_url:
+    file: base_url.txt
