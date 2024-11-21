@@ -1,0 +1,6 @@
+db_password.txt
+db_root_password.txt
+.env
+base_url.txt
+scripts/data
+scripts/demo_scrape.py
