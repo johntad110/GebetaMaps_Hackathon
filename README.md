@@ -276,6 +276,5 @@ This project is licensed under the MIT liscense. See [LICENSE](/LICENSE) for mor
 ## 🔗Links
 
 - [Demo Website](#)
-- [API Wrapper on NPM](#)
-- [GitHub Repository](#)
-- [Client Use Case: Al-Khana Real Estate](#)
+- [API Wrapper on NPM](https://www.npmjs.com/package/gebetamap)
+- [GitHub Repository](https://github.com/johntad110/gebeta-maps)
