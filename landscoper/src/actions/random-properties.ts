@@ -106,7 +106,6 @@ export async function getRandomProperties(): Promise<Property[]> {
 
                         // Resolve when all properties have been processed
                         if (properties.length === results.length) {
-                            console.log('PROPESRTTRE', properties)
                             resolve(properties);
                         }
                     });

@@ -14,7 +14,6 @@ export default function PropertyList() {
         async function fetchProperties() {
             try {
                 const response = await axios.get('/api/get-samples');
-                console.log('DATA', response.data)
                 setProperties(response.data.properties);
                 // setSelectedProperty(response.data.properties[0])
             } catch (error) {
