@@ -1,7 +1,13 @@
 import React from "react";
 import { getDictionary } from "../dictionaries";
 
-const About = async ({ params: { lang } }: { params: { lang: string } }) => {
+interface AboutProp {
+    params: {
+        lang: string
+    }
+}
+
+export default async function ({ params: { lang } }: AboutProp) {
     const dict = await getDictionary(lang)
 
     return (
@@ -19,7 +25,7 @@ const About = async ({ params: { lang } }: { params: { lang: string } }) => {
             {/* Mission Statement */}
             <section className="py-16 px-4 text-center">
                 <p className="text-xl md:text-2xl text-gray-300 mx-auto max-w-3xl">
-                {dict["about"]["mission"]["content"]}
+                    {dict["about"]["mission"]["content"]}
                 </p>
             </section>
 
@@ -111,5 +117,3 @@ const About = async ({ params: { lang } }: { params: { lang: string } }) => {
         </div>
     );
 };
-
-export default About;
