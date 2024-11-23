@@ -1,15 +1,19 @@
 import React from "react";
 import { getDictionary } from "../dictionaries";
 
-interface AboutProp {
+interface AboutProps {
     params: {
-        lang: string
-    }
+        lang: string;
+    };
+    dict: any; // Define the dictionary type here
 }
 
-export default async function ({ params: { lang } }: AboutProp) {
-    const dict = await getDictionary(lang)
+export const getServerSideProps = async ({ params }: { params: { lang: string } }) => {
+    const dictionary = await getDictionary(params.lang);
+    return { props: { params, dictionary } };
+};
 
+export default async function ({ params: { lang }, dict }: AboutProps) {
     return (
         <div className="bg-black text-white font-[family-name:var(--font-funnel-display)] p-8 pb-20 gap-16 sm:p-20 mb-64">
             {/* Hero Section */}
