@@ -24,7 +24,7 @@ export default function Hero({ dict }: { dict: any; }) {
                 </div>
 
                 {/* CTA Button */}
-                <a href="cta" className="bg-white text-black py-3 px-8 rounded-full text-lg font-semibold transition duration-300 hover:bg-black hover:text-white">
+                <a href="/login" className="bg-white text-black py-3 px-8 rounded-full text-lg font-semibold transition duration-300 hover:bg-black hover:text-white">
                 {dict["home"]["hero"]["cta"]}
                 </a>
             </div>
