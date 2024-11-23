@@ -1,9 +1,9 @@
-export default function Hero() {
+export default function Hero({ dict }: { dict: any; }) {
     return (
         <section className="relative w-full h-screen bg-black text-white flex items-center">
             {/* Background Image */}
             <div className="absolute inset-0 bg-cover bg-center rounded-3xl"
-                style={{ backgroundImage: "url('/hero.webp')" }}>
+                style={{ backgroundImage: "url('/images/hero.webp')" }}>
                 {/* Dark overlay to for text visibility */}
                 <div className="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
             </div>
@@ -14,18 +14,18 @@ export default function Hero() {
                 <div className="border border-white/30 p-2  overflow-hidden backdrop-blur-xl mb-4 px-8 sm:rounded-2xl">
                     {/* Title */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-4">
-                        Welcome to Landscoper
+                        {dict["home"]["hero"]["title"]}
                     </h1>
 
                     {/* Subtitle */}
                     <p className="text-lg sm:text-xl md:text-2xl mb-6 max-w-3xl">
-                        Modern. Elegant. Fast.
+                    {dict["home"]["hero"]["sub-title"]}
                     </p>
                 </div>
 
                 {/* CTA Button */}
                 <a href="cta" className="bg-white text-black py-3 px-8 rounded-full text-lg font-semibold transition duration-300 hover:bg-black hover:text-white">
-                    Get Started
+                {dict["home"]["hero"]["cta"]}
                 </a>
             </div>
         </section>

@@ -1,0 +1,15 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": {
+            "title": "Welcome to Landscoper",
+            "sub-title": "Modern. Elegant. Fast.",
+            "cta": "Get Started"
+        }
+    }
+}
