@@ -11,7 +11,7 @@ export default function Hero({ dict }: { dict: any; }) {
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col justify-center items-center h-fit text-center sm:px-6 md:px-12 w-full">
 
-                <div className="border border-white/30 p-2  overflow-hidden backdrop-blur-xl mb-4 px-8 sm:rounded-2xl">
+                <div className="border border-white/30 p-2  overflow-hidden backdrop-blur-lg bg-gradient-to-tr from-white/30 to-amber-500/20 mb-4 px-8 sm:rounded-2xl">
                     {/* Title */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-4">
                         {dict["home"]["hero"]["title"]}
