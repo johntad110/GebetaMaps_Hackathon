@@ -4,3 +4,4 @@ db_root_password.txt
 base_url.txt
 scripts/data
 scripts/demo_scrape.py
+node_modules
