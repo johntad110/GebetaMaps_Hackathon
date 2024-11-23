@@ -11,5 +11,56 @@
             "sub-title": "Modern. Elegant. Fast.",
             "cta": "Get Started"
         }
+    },
+    "about": {
+        "hero": {
+            "headline": "Revolutionizing Property Insights for Smarter Decisions",
+            "subheadline": "Landscoper bridges the gap between property data and informed decision-making, leveraging cutting-edge geospatial analysis powered by GebetaMaps."
+        },
+        "mission": {
+            "content": "At Landscoper, we believe every property decision should be guided by insights you can trust. Our mission is to empower buyers and investors with data-driven reports that turn complexity into clarity."
+        },
+        "team": {
+            "title": "Meet The Team",
+            "john": {
+                "name": "John Tad",
+                "role": "Lead Developer",
+                "fact": "Fun Fact: Loves coffee and coding!"
+            },
+            "jerry": {
+                "name": "Jerry Desalegn",
+                "role": "Data analysit",
+                "fact": "Fun Fact: A passionate reader."
+            },
+            "miki": {
+                "name": "Mikias Lidetu",
+                "role": "Real Estate Expert",
+                "fact": "Fun Fact: Loves to Hike."
+            }
+        },
+        "how-it-works": {
+            "title": "How it works?",
+            "step1": "We collect and analyze raw property data.",
+            "step2": "Our proprietary tools assess proximity, traffic, and investment potential.",
+            "step3": "We deliver tailored insights to make your decisions smarter."
+        },
+        "values": {
+            "title": "Our Values",
+            "value1": "Transparency",
+            "value1-desc": "We value honesty in the data we provide.",
+            "value2": "Empowerment",
+            "value2-desc": "We empower users to make smarter decisions.",
+            "value3": "Innovation",
+            "value3-desc": "Our tools redefine what’s possible in property analysis."
+        },
+        "testimonial": {
+            "title": "What Our Users Say",
+            "testimonial1": "Landscoper saved me weeks of research and helped me find the perfect property near great schools!",
+            "testimonial2": "The insights I received were a game-changer for my investment strategy."
+        },
+        "cta": {
+            "headline": "Discover the Insights You’ve Been Missing",
+            "btn": "Start Exploring"
+        }
     }
 }
