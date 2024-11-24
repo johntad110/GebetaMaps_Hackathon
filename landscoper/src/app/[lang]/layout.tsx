@@ -1,5 +1,3 @@
-export const dynamic = 'force-static';
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
@@ -41,12 +39,13 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: LangParams
+  params: Promise<LangParams>
 }>) {
-  const dict = await getDictionary(params.lang)
+  const { lang } = await params
+  const dict = await getDictionary(lang)
 
   return (
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body
         className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
       >
