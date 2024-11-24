@@ -44,7 +44,7 @@ export default async function RootLayout({
   const dict = await getDictionary(params.lang)
 
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body
         className={`${funnelDisplay.variable} ${geistMono.variable} antialiased`}
       >
